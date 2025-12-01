@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f0f2f5;
+  text-align: center;
+}
+body h1 {
+  margin: 50px 0 20px 0;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.form_section,
+.display_section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0 40px 0;
+  min-height: 40vh;
+  min-width: max(500px, 45%);
+}
+.form_section {
+  text-align: center;
+  padding-bottom: 60px;
+}
+.form_section h2 {
+  margin: 20px 0;
+}
+.form_section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+  }
+  input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.display_section {
+align-self: auto; 
+ overflow-y: auto;
+  text-align: center;
+}
+
+.no_todo_msg {
+    margin-top: 50px;
+    font-size: 18px;
+    color: #777;
+}
+

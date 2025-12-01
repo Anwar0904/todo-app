@@ -1,0 +1,10 @@
+# Ignore data files
+tasks.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+error_log
+*.log
