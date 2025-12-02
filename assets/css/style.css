@@ -24,13 +24,15 @@ main {
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0 40px 0;
+  margin: 20px 20px 40px;
   min-height: 40vh;
-  min-width: max(500px, 45%);
+  width: max(500px, 45%);
 }
 .form_section {
   text-align: center;
   padding-bottom: 60px;
+  max-width: 600px;
+  max-height: 65vh;
 }
 .form_section h2 {
   margin: 20px 0;
@@ -56,7 +58,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    resize: vertical;
+    resize: none;
   }
   input[type="submit"] {
     background-color: #28a745;
@@ -68,14 +70,95 @@ main {
 }
 
 .display_section {
-align-self: auto; 
- overflow-y: auto;
+   height: 65vh;
+  overflow-y: auto;
   text-align: center;
 }
 
 .no_todo_msg {
-    margin-top: 50px;
-    font-size: 18px;
-    color: #777;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #777;
 }
 
+.todo_item {
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+  padding-bottom: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+  .todo_item_display {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .todo_name_and_date {
+    flex-grow: 1;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+  p#todo_date {
+    font-size: 22px;
+    color: #555;
+  }
+ 
+  p#todo_desc {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #333;
+    display: none;
+  }
+  
+  .todo_dropdown {
+  position: absolute;
+  bottom: 0px;
+  display: none;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+  
+  .dropdown_arrow {
+    cursor: pointer;
+    user-select: none;
+  }
+  .edit_btn,
+  .delete_btn {
+    margin: 4px;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  .edit_btn {
+    background-color: #007bff;
+  }
+  .delete_btn {
+    background-color: #dc3545;
+  }
+  .complete_btn {
+    display: block;
+    margin: 4px auto;
+    padding: 4px 20px;
+    width: 95%;
+    background-color: rgb(3, 192, 3);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+}
+.todo_item:hover .todo_dropdown {
+  display: block;
+}
