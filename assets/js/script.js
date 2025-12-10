@@ -1,13 +1,14 @@
-const dropdownArrow = document.querySelector('.dropdown_arrow');
-const todo_desc = document.querySelector('#todo_desc');
-
-dropdownArrow.onclick = function() {
-
-    if(todo_desc.style.display === 'block'){
-        todo_desc.style.display = 'none';
-        dropdownArrow.style.transform = 'rotate(0deg)';
-    } else {
-        todo_desc.style.display = 'block';
-        dropdownArrow.style.transform = 'rotate(180deg)';
+const dropdownArrows = document.querySelectorAll('.dropdown_arrow');
+const todo_descs = document.querySelectorAll('#todo_desc');
+document.querySelector('#todo_date').min=new Date().toISOString().split("T")[0];
+dropdownArrows.forEach((arrow, index) => {
+    arrow.onclick = function() {
+        if(todo_descs[index].style.display === 'block'){
+            todo_descs[index].style.display = 'none';
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            todo_descs[index].style.display = 'block';
+            arrow.style.transform = 'rotate(180deg)';
+        }
     }
-}
+});

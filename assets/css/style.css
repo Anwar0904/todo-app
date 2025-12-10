@@ -27,12 +27,14 @@ main {
   margin: 20px 20px 40px;
   min-height: 40vh;
   width: max(500px, 45%);
+   height: 65vh;
+   overflow-y: auto;
 }
 .form_section {
   text-align: center;
   padding-bottom: 60px;
   max-width: 600px;
-  max-height: 65vh;
+ 
 }
 .form_section h2 {
   margin: 20px 0;
@@ -69,9 +71,22 @@ main {
   }
 }
 
+.edit_cancel_btn{
+  width: 80%;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s ease;
+}
 .display_section {
-   height: 65vh;
-  overflow-y: auto;
+  
   text-align: center;
 }
 
