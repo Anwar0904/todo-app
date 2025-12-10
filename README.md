@@ -1,12 +1,12 @@
 # Todo List Web App
 
-A simple todo list application built with HTML, CSS, and PHP.
+A simple todo list application built with HTML, CSS, JS, and PHP.
 
 ## Features
 - Add new tasks
 - Mark tasks as complete/incomplete
 - Delete tasks
-- View task statistics
+- Edit task/todo
 - Responsive design
 
 ## Setup
@@ -18,5 +18,5 @@ A simple todo list application built with HTML, CSS, and PHP.
 ## Technologies Used
 - PHP for backend logic
 - HTML/CSS for frontend
-- JSON for data storage
+- MySQL for data storage
 - Git for version control
